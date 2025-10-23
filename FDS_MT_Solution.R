@@ -60,6 +60,20 @@ ggplot(mtcars, aes(x = wt)) +
        x = "Weight (1000 lbs)",
        y = "Frequency")
 
+# iv) violin plot to visualize the distribution of mpg across different cyl categories
+ggplot(mtcars, aes(x = factor(cyl), y = mpg, fill = factor(cyl))) +
+  geom_violin() +
+  labs(title = "Violin Plot of MPG by cyl Count",
+       x = "Number of Gears",
+       y = "Miles Per Gallon (mpg)")
+
+# iv) density plot to show the distribution of the mgp variable
+ggplot(mtcars, aes(x = mpg)) +
+  geom_density(fill = "orange", alpha = 0.7) +
+  labs(title = "Density Plot of mpg",
+       x = "mpg",
+       y = "Density")
+
 
 
 
